@@ -25,10 +25,7 @@ export class CdkPlaygroundPipelineStack extends cdk.Stack {
     const pipeline = new CodePipeline(this, 'Pipeline', {
       pipelineName: 'MyFirstPipeline',
       synth: new ShellStep('Synth', {
-        input: CodePipelineSource.gitHub(
-          'https://github.com/thangkieu/cdk-playground',
-          'main'
-        ),
+        input: CodePipelineSource.gitHub('thangkieu/becalm.icu', 'main'),
         commands: ['npm ci', 'npm run build', 'npx cdk synth'],
       }),
     });

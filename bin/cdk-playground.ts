@@ -7,12 +7,12 @@ import {
 } from '../lib/cdk-playground-stack';
 
 const app = new cdk.App();
-new CdkPlaygroundStack(app, 'CdkPlaygroundStack', {
-  env: {
-    account: process.env.CDK_DEFAULT_ACCOUNT,
-    region: process.env.CDK_DEFAULT_REGION,
-  },
-});
+// new CdkPlaygroundStack(app, 'CdkPlaygroundStack', {
+//   env: {
+//     account: process.env.CDK_DEFAULT_ACCOUNT,
+//     region: process.env.CDK_DEFAULT_REGION,
+//   },
+// });
 
 new CdkPlaygroundPipelineStack(app, 'CdkPlaygroundPipelineStack', {
   env: {
