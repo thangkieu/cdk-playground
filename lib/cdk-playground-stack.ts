@@ -26,7 +26,7 @@ export class CdkPlaygroundPipelineStack extends cdk.Stack {
       pipelineName: 'MyFirstPipeline',
       synth: new ShellStep('Synth', {
         input: CodePipelineSource.gitHub('thangkieu/becalm.icu', 'main'),
-        commands: ['npm ci', 'npm run build', 'npx cdk synth'],
+        commands: ['npm ci', 'npm run build'],
       }),
     });
   }
